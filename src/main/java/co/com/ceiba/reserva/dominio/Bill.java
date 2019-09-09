@@ -7,7 +7,7 @@ public class Bill {
 	private float price;
 	private int discountForPeople;
 	private int discpuntForDays;
-
+	
 	
 
 	
