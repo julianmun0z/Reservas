@@ -19,7 +19,15 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-test {     systemProperties 'property': 'value'    jacoco {  append = false  destinationFile = file("jacoco/jacocoTest.exec")    }    reports.junitXml.destination = file ("jacoco/test-results") } 
+
+
+test {     
+	jacoco {
+		append = false  
+		destinationFile = file("jacoco/jacocoTest.exec") 
+   }
+   reports.junitXml.destination = file ("jacoco/test-results")
+} 
  
 jacocoTestReport.dependsOn(test) 
  
