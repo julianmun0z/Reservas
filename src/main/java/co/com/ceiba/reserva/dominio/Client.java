@@ -6,9 +6,6 @@ public class Client {
 	private String lastNmae;
 	private String Email;
 	private String phoneNumber;
-	
-	
-	
 
 	public Client(String firstName, String lastNmae, String email, String phoneNumber) {
 		super();

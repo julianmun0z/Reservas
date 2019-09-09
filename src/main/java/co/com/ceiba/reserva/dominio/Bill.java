@@ -7,12 +7,6 @@ public class Bill {
 	private float price;
 	private int discountForPeople;
 	private int discpuntForDays;
-	
-	
-
-	
-
-
 
 	public Bill(float price, int discountForPeople, int discpuntForDays, Reservation reservation) {
 		this.price = price;
