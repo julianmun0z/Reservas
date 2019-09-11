@@ -15,11 +15,9 @@ public class Reservation {
 	}
 
 	public Reservation(Date reservationDate, int numberPeople, boolean decor, Date currentDate) {
-		super();
 		this.reservationDate = reservationDate;
 		this.numberPeople = numberPeople;
 		this.decor = decor;
-		this.currentDate = currentDate;
 	}
 
 	public Date getReservationDate() {

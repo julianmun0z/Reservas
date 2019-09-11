@@ -12,7 +12,6 @@ public class Client {
 
 
 	public Client(String firstName, String lastName, String email, String phoneNumber) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

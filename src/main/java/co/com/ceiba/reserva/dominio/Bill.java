@@ -8,16 +8,15 @@ public class Bill {
 	private Reservation reservation;
 
 	public Bill() {
-		super();
+
 	}
 
 	public Bill(float price, int discountForPeople, int discpuntForDays, Reservation reservation) {
-		super();
+
 		this.price = price;
 		this.discountForPeople = discountForPeople;
 		this.discpuntForDays = discpuntForDays;
 		this.reservation = reservation;
-		
 
 	}
 
