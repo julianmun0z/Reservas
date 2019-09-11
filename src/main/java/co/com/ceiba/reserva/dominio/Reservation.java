@@ -11,10 +11,10 @@ public class Reservation {
 	Date currentDate = new Date();
 
 	public Reservation() {
-		super();
+		
 	}
 
-	public Reservation(Date reservationDate, int numberPeople, boolean decor, Date currentDate) {
+	public Reservation(Date reservationDate, int numberPeople, boolean decor) {
 		this.reservationDate = reservationDate;
 		this.numberPeople = numberPeople;
 		this.decor = decor;
