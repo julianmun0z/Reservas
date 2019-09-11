@@ -27,7 +27,7 @@ public class ClientTest {
 		
 		//assert
 		assertEquals(FIRSTNAME, client.getFirstName());
-		assertEquals(LASTNAME, client.getLastNmae());
+		assertEquals(LASTNAME, client.getLastName());
 		assertEquals(EMAIL, client.getEmail());
 		assertEquals(PHONENUMBER, client.getPhoneNumber());
 		

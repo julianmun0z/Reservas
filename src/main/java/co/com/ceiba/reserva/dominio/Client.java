@@ -3,18 +3,28 @@ package co.com.ceiba.reserva.dominio;
 public class Client {
 	
 	private String firstName;
-	private String lastNmae;
-	private String Email;
+	private String lastName;
+	private String email;
 	private String phoneNumber;
 
 	
 
-	public Client(String firstName, String lastNmae, String email, String phoneNumber) {
+
+
+	public Client(String firstName, String lastName, String email, String phoneNumber) {
 		super();
 		this.firstName = firstName;
-		this.lastNmae = lastNmae;
-		Email = email;
+		this.lastName = lastName;
+		this.email = email;
 		this.phoneNumber = phoneNumber;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
@@ -25,20 +35,12 @@ public class Client {
 		this.firstName = firstName;
 	}
 
-	public String getLastNmae() {
-		return lastNmae;
-	}
-
-	public void setLastNmae(String lastNmae) {
-		this.lastNmae = lastNmae;
-	}
-
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
 	public String getPhoneNumber() {

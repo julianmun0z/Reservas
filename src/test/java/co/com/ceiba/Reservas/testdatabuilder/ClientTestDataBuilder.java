@@ -10,13 +10,13 @@ public class ClientTestDataBuilder {
 	private static final String PHONENUMBER = "123456789";
 
 	private String firstName;
-	private String lastNmae;
+	private String lastName;
 	private String Email;
 	private String phoneNumber;
 
 	public ClientTestDataBuilder() {
 		this.firstName = FIRSTNAME;
-		this.lastNmae = LASTNAME;
+		this.lastName = LASTNAME;
 		this.Email = EMAIL;
 		this.phoneNumber = PHONENUMBER;
 	}
@@ -27,7 +27,7 @@ public class ClientTestDataBuilder {
 	}
 
 	public ClientTestDataBuilder whitLastName(String lastName) {
-		this.lastNmae = lastName;
+		this.lastName = lastName;
 		return this;
 
 	}
@@ -44,7 +44,7 @@ public class ClientTestDataBuilder {
 	}
 
 	public Client build() {
-		return new Client(this.firstName, this.lastNmae, this.Email, this.phoneNumber);
+		return new Client(this.firstName, this.lastName, this.Email, this.phoneNumber);
 
 	}
 
