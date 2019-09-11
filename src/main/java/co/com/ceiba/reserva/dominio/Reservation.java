@@ -6,12 +6,20 @@ public class Reservation {
 
 	private Date reservationDate;
 	private int numberPeople;
-	
-	
-	public Reservation(Date reservationDate, int numberPeople) {
+	private boolean decor;
+
+	Date currentDate = new Date();
+
+	public Reservation() {
+		super();
+	}
+
+	public Reservation(Date reservationDate, int numberPeople, boolean decor, Date currentDate) {
 		super();
 		this.reservationDate = reservationDate;
 		this.numberPeople = numberPeople;
+		this.decor = decor;
+		this.currentDate = currentDate;
 	}
 
 	public Date getReservationDate() {
@@ -30,7 +38,20 @@ public class Reservation {
 		this.numberPeople = numberPeople;
 	}
 
+
+	public boolean isDecor() {
+		return decor;
+	}
+
+	public void setDecor(boolean decor) {
+		this.decor = decor;
+	}
+
+	public long differenceBetweenCurrentDateAndReservationDate(Date currentDate, Date reservationDate) {
+
+		long difference = (reservationDate.getTime() - currentDate.getTime()) / 86400000;
+		return difference;
+	}
 	
-	
-	
+
 }

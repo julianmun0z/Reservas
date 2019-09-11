@@ -7,6 +7,8 @@ public class Client {
 	private String Email;
 	private String phoneNumber;
 
+	
+
 	public Client(String firstName, String lastNmae, String email, String phoneNumber) {
 		super();
 		this.firstName = firstName;
@@ -15,19 +17,13 @@ public class Client {
 		this.phoneNumber = phoneNumber;
 	}
 
-	
-
 	public String getFirstName() {
 		return firstName;
 	}
 
-
-
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
-
 
 	public String getLastNmae() {
 		return lastNmae;

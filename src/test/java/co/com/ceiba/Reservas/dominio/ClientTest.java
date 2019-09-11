@@ -1,9 +1,7 @@
 package co.com.ceiba.Reservas.dominio;
 
 import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
-
 import co.com.ceiba.Reservas.testdatabuilder.ClientTestDataBuilder;
 import co.com.ceiba.reserva.dominio.Client;
 
@@ -13,6 +11,7 @@ public class ClientTest {
 	private static final String LASTNAME = "gomez";
 	private static final String EMAIL = "J@J.COM";
 	private static final String PHONENUMBER = "123456789";
+	
 
 	@Test
 	public void createClientTest() {
@@ -34,5 +33,7 @@ public class ClientTest {
 		
 		
 	}
+	
+	
 
 }
