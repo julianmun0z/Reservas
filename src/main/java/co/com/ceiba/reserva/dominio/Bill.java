@@ -1,7 +1,5 @@
 package co.com.ceiba.reserva.dominio;
 
-import co.com.ceiba.reserva.dominio.Reservation;
-
 public class Bill {
 
 	private float price;
