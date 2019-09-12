@@ -42,8 +42,7 @@ public class ReservationTest {
 	
 	@Test
 	public void  differenceBetweenCurrentDateAndReservationDate() {
-		createReservationTest();
-		
+	
 		//arrange
 		Date  reservationDate = RESERVATIONDATE;
 		Date currentDate = CURRENTDATE;

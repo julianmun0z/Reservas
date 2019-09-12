@@ -70,30 +70,15 @@ public class Bill {
 		return price;
 	}
 
-	public float conditionForThedaysTuesdayWednesdayFridaySaturday() {
-		if (reservation.getReservationDate().getDay() == 2 || reservation.getReservationDate().getDay() == 3) {
-			discpuntForDays *= price / 100;
-			price = discpuntForDays;
+	public float restriccionForFridayAndSaturday() {
 
-			return price;
-
-		} else if (reservation.getReservationDate().getDay() == 5
-				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) >= 15) {
-
-			return price;
-
-		} else if (reservation.getReservationDate().getDay() == 6
-				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) >= 15) {
-
-			return price;
-
-		} else if (reservation.getReservationDate().getDay() == 5
+		if (reservation.getReservationDate().getDay() == 5 || reservation.getReservationDate().getDay() == 6
 				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) < 15) {
 
-			return price = 0;
+			return price;
 
-		} else if (reservation.getReservationDate().getDay() == 6
-				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) < 15) {
+		} else if (reservation.getReservationDate().getDay() == 5 || reservation.getReservationDate().getDay() == 6
+				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) >= 15) {
 
 			return price = 0;
 
@@ -101,7 +86,6 @@ public class Bill {
 
 			return price;
 		}
-
 	}
 
 	public float decorForReservation() {

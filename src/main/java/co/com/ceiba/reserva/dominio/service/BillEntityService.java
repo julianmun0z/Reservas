@@ -1,0 +1,13 @@
+package co.com.ceiba.reserva.dominio.service;
+
+import java.util.List;
+
+import co.com.ceiba.reserva.dominio.entity.BillEntity;
+
+public interface BillEntityService {
+	List<BillEntity>listar(); 
+	BillEntity listarId(int id);
+	BillEntity add(BillEntity id);
+	BillEntity edit(BillEntity id);
+	BillEntity delete(int id);
+}
