@@ -24,7 +24,8 @@ public class BillTest {
 	private static final int DISCOUNTFORDAYS = 20;
 	private static final boolean DECOR = true;
 	private static final Date DATEWITHTUESDAYANDWENESDAY = new Date(2019-1900,8,24);
-
+	private static final Date DATEWITHFRIDAYANDSATURDAY = new Date(2019-1900,8,27);
+	private static final long DIFFERENCEOFDATE = 15;
 	@Spy
 	private Reservation reservation;
 
@@ -58,11 +59,11 @@ public class BillTest {
 
 		// arrange
 
-		given(reservation.getNumberPeople()).willReturn(NUMBER_PEOPLE);
+		//given(reservation.getNumberPeople()).willReturn(NUMBER_PEOPLE);
 		reservation.setNumberPeople(NUMBER_PEOPLE);
 		bill.setDiscountForPeople(DISCOUNTFORPEOPLE);
 		bill.setPrice(PRICE);
-		bill.setReservation(reservation);
+		
 
 		float pricewhitheDiscount = 297500;
 
@@ -78,7 +79,7 @@ public class BillTest {
 	public void discountForTuesdayAndWednesday() {
 		
 		//arrange
-		given(reservation.getReservationDate()).willReturn(DATEWITHTUESDAYANDWENESDAY);
+		//given(reservation.getReservationDate()).willReturn(DATEWITHTUESDAYANDWENESDAY);
 		reservation.setReservationDate(DATEWITHTUESDAYANDWENESDAY);
 		bill.setPrice(PRICE);
 		bill.setDiscpuntForDays(DISCOUNTFORDAYS);
@@ -90,6 +91,22 @@ public class BillTest {
 		
 		//assert
 		assertEquals(priceWhiteDiscountDay, newPriceWhiteDiscountDay,0);
+	}
+	
+	
+	public void restriccionForFridayAndSaturday() {
+		//arrange
+		//given(reservation.getReservationDate()).willReturn(DATEWITHFRIDAYANDSATURDAY);
+		reservation.setReservationDate(DATEWITHFRIDAYANDSATURDAY);
+		//given(reservation.differenceBetweenCurrentDateAndReservationDate()).willReturn(DIFFERENCEOFDATE);
+		//reservation.differenceBetweenCurrentDateAndReservationDate(currentDate, reservationDate)
+		float newPrice = 0;
+		
+		//act
+		float priceNOT = bill.restriccionForFridayAndSaturday();
+		
+		//assert
+		assertEquals(newPrice, priceNOT,0);
 	}
 
 	@Test

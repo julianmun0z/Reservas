@@ -77,13 +77,7 @@ public class Bill {
 		if (reservation.getReservationDate().getDay() == 5 || reservation.getReservationDate().getDay() == 6
 				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) < 15) {
 
-			return price;
-
-		} else if (reservation.getReservationDate().getDay() == 5 || reservation.getReservationDate().getDay() == 6
-				&& reservation.differenceBetweenCurrentDateAndReservationDate(null, null) >= 15) {
-
 			return price = 0;
-
 		} else {
 
 			return price;
