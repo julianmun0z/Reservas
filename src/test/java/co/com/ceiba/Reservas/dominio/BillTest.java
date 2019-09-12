@@ -3,6 +3,8 @@ package co.com.ceiba.Reservas.dominio;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
+import java.util.Date;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -20,19 +22,19 @@ public class BillTest {
 	private static final float PRICE = 350000;
 	private static final int DISCOUNTFORPEOPLE = 15;
 	private static final int DISCOUNTFORDAYS = 20;
-
-
+	private static final boolean DECOR = true;
+	private static final Date DATEWITHTUESDAYANDWENESDAY = new Date(2019-1900,8,24);
 
 	@Spy
 	private Reservation reservation;
 
 	@InjectMocks
 	private Bill bill = new Bill();
-	
+
 	@Before
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
-		
+
 	}
 
 	@Test
@@ -55,14 +57,13 @@ public class BillTest {
 	public void discountForFivePeopleOrMore() {
 
 		// arrange
-	
+
 		given(reservation.getNumberPeople()).willReturn(NUMBER_PEOPLE);
-		//reservation=new Reservation();
 		reservation.setNumberPeople(NUMBER_PEOPLE);
 		bill.setDiscountForPeople(DISCOUNTFORPEOPLE);
 		bill.setPrice(PRICE);
 		bill.setReservation(reservation);
-	
+
 		float pricewhitheDiscount = 297500;
 
 		// act
@@ -71,6 +72,41 @@ public class BillTest {
 
 		// assert
 		assertEquals(pricewhitheDiscount, newPrice, 0);
+	}
+
+	@Test
+	public void discountForTuesdayAndWednesday() {
+		
+		//arrange
+		given(reservation.getReservationDate()).willReturn(DATEWITHTUESDAYANDWENESDAY);
+		reservation.setReservationDate(DATEWITHTUESDAYANDWENESDAY);
+		bill.setPrice(PRICE);
+		bill.setDiscpuntForDays(DISCOUNTFORDAYS);
+		
+		float priceWhiteDiscountDay= 280000;
+		//act
+		float  newPriceWhiteDiscountDay = bill.discountForTuesdayAndWednesday();
+		
+		
+		//assert
+		assertEquals(priceWhiteDiscountDay, newPriceWhiteDiscountDay,0);
+	}
+
+	@Test
+	public void decorForReservation() {
+
+		// arrange
+		given(reservation.isDecor()).willReturn(DECOR);
+		bill.setPrice(PRICE);
+
+		float pricePlusDecoration = 380000;
+		// act
+
+		float newPricePlusDecoration = bill.decorForReservation();
+
+		// assert
+		assertEquals(pricePlusDecoration, newPricePlusDecoration, 0);
+
 	}
 
 }

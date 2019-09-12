@@ -65,7 +65,9 @@ public class Bill {
 	public float discountForTuesdayAndWednesday() {
 		if (reservation.getReservationDate().getDay() == 2 || reservation.getReservationDate().getDay() == 3) {
 			discpuntForDays *= price / 100;
-			price = discpuntForDays;
+			price -= discpuntForDays;
+			return price;
+			
 		}
 		return price;
 	}
