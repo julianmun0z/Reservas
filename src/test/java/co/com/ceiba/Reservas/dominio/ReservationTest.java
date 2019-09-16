@@ -9,8 +9,8 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 
+import co.com.ceiba.Reservas.dominio.Reservation;
 import co.com.ceiba.Reservas.testdatabuilder.ReservationTestDataBuilder;
-import co.com.ceiba.reserva.dominio.Reservation;
 
 public class ReservationTest {
 	private static final Date CURRENTDATE = new Date(2019-1900,8,9);

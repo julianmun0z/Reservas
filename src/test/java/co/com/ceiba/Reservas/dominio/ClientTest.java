@@ -2,8 +2,9 @@ package co.com.ceiba.Reservas.dominio;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+
+import co.com.ceiba.Reservas.dominio.Client;
 import co.com.ceiba.Reservas.testdatabuilder.ClientTestDataBuilder;
-import co.com.ceiba.reserva.dominio.Client;
 
 public class ClientTest {
 

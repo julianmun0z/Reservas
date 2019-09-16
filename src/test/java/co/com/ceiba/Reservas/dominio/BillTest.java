@@ -7,9 +7,11 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
+
+import co.com.ceiba.Reservas.dominio.Bill;
+import co.com.ceiba.Reservas.dominio.Reservation;
 import co.com.ceiba.Reservas.testdatabuilder.BillTestDataBuilder;
-import co.com.ceiba.reserva.dominio.Bill;
-import co.com.ceiba.reserva.dominio.Reservation;
+
 import static org.mockito.BDDMockito.*;
 
 public class BillTest {

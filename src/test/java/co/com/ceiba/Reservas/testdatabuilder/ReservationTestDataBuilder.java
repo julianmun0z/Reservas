@@ -2,7 +2,7 @@ package co.com.ceiba.Reservas.testdatabuilder;
 
 import java.util.Date;
 
-import co.com.ceiba.reserva.dominio.Reservation;
+import co.com.ceiba.Reservas.dominio.Reservation;
 
 public class ReservationTestDataBuilder {
 	

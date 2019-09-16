@@ -1,6 +1,6 @@
 package co.com.ceiba.Reservas.testdatabuilder;
 
-import co.com.ceiba.reserva.dominio.Bill;
+import co.com.ceiba.Reservas.dominio.Bill;
 
 public class BillTestDataBuilder {
 
