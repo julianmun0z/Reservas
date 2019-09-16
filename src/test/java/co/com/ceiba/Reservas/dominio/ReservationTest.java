@@ -44,6 +44,7 @@ public class ReservationTest {
 	public void  differenceBetweenCurrentDateAndReservationDate() {
 	
 		//arrange
+	
 		Date  reservationDate = RESERVATIONDATE;
 		Date currentDate = CURRENTDATE;
 		long withDifference = 15;

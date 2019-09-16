@@ -5,16 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "bill")
+@Entity(name="bill")
 public class BillEntity {
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_Bill;
+	private int id;
 	@Column
 	private float price;
 	@Column
@@ -22,12 +20,12 @@ public class BillEntity {
 	@Column
 	private int discpuntForDays;
 
-	public int getId_Bill() {
-		return id_Bill;
+	public int getId() {
+		return id;
 	}
 
-	public void setId_Bill(int id_Bill) {
-		this.id_Bill = id_Bill;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public float getPrice() {
@@ -53,5 +51,13 @@ public class BillEntity {
 	public void setDiscpuntForDays(int discpuntForDays) {
 		this.discpuntForDays = discpuntForDays;
 	}
+
+	@Override
+	public String toString() {
+		return "BillEntity [id=" + id + ", price=" + price + ", discountForPeople=" + discountForPeople
+				+ ", discpuntForDays=" + discpuntForDays + "]";
+	}
+	
+	
 
 }

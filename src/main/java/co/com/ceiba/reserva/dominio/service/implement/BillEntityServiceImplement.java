@@ -2,6 +2,8 @@ package co.com.ceiba.reserva.dominio.service.implement;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,8 @@ public class BillEntityServiceImplement implements BillEntityService {
 	private BillEntityRepository billRepository;
 	
 	@Override
-	public List<BillEntity> listar() {
+	@Transactional
+	public List<BillEntity>listar() {
 		return billRepository.findAll();
 	}
 
@@ -27,13 +30,13 @@ public class BillEntityServiceImplement implements BillEntityService {
 	}
 
 	@Override
-	public BillEntity add(BillEntity id) {
-		// TODO Auto-generated method stub
+	public BillEntity add(BillEntity b) {
+		
 		return null;
 	}
 
 	@Override
-	public BillEntity edit(BillEntity id) {
+	public BillEntity edit(BillEntity b) {
 		// TODO Auto-generated method stub
 		return null;
 	}

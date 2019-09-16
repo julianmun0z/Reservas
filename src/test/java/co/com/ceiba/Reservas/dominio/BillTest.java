@@ -1,17 +1,12 @@
 package co.com.ceiba.Reservas.dominio;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
-
 import java.util.Date;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
-
 import co.com.ceiba.Reservas.testdatabuilder.BillTestDataBuilder;
 import co.com.ceiba.reserva.dominio.Bill;
 import co.com.ceiba.reserva.dominio.Reservation;
@@ -23,9 +18,10 @@ public class BillTest {
 	private static final int DISCOUNTFORPEOPLE = 15;
 	private static final int DISCOUNTFORDAYS = 20;
 	private static final boolean DECOR = true;
-	private static final Date DATEWITHTUESDAYANDWENESDAY = new Date(2019-1900,8,24);
-	private static final Date DATEWITHFRIDAYANDSATURDAY = new Date(2019-1900,8,27);
-	private static final long DIFFERENCEOFDATE = 15;
+	@SuppressWarnings("deprecation")
+	private static final Date DATEWITHTUESDAYANDWENESDAY = new Date(2019 - 1900, 8, 24);
+	@SuppressWarnings("deprecation")
+	private static final Date DATEWITHFRIDAYANDSATURDAY = new Date(2019 - 1900, 8, 27);
 	@Spy
 	private Reservation reservation;
 
@@ -59,11 +55,9 @@ public class BillTest {
 
 		// arrange
 
-		//given(reservation.getNumberPeople()).willReturn(NUMBER_PEOPLE);
 		reservation.setNumberPeople(NUMBER_PEOPLE);
 		bill.setDiscountForPeople(DISCOUNTFORPEOPLE);
 		bill.setPrice(PRICE);
-		
 
 		float pricewhitheDiscount = 297500;
 
@@ -77,36 +71,30 @@ public class BillTest {
 
 	@Test
 	public void discountForTuesdayAndWednesday() {
-		
-		//arrange
-		//given(reservation.getReservationDate()).willReturn(DATEWITHTUESDAYANDWENESDAY);
+
+		// arrange
 		reservation.setReservationDate(DATEWITHTUESDAYANDWENESDAY);
 		bill.setPrice(PRICE);
 		bill.setDiscpuntForDays(DISCOUNTFORDAYS);
-		
-		float priceWhiteDiscountDay= 280000;
-		//act
-		float  newPriceWhiteDiscountDay = bill.discountForTuesdayAndWednesday();
-		
-		
-		//assert
-		assertEquals(priceWhiteDiscountDay, newPriceWhiteDiscountDay,0);
+
+		float priceWhiteDiscountDay = 280000;
+		// act
+		float newPriceWhiteDiscountDay = bill.discountForTuesdayAndWednesday();
+
+		// assert
+		assertEquals(priceWhiteDiscountDay, newPriceWhiteDiscountDay, 0);
 	}
-	
-	
+
 	public void restriccionForFridayAndSaturday() {
-		//arrange
-		//given(reservation.getReservationDate()).willReturn(DATEWITHFRIDAYANDSATURDAY);
+		// arrange
 		reservation.setReservationDate(DATEWITHFRIDAYANDSATURDAY);
-		//given(reservation.differenceBetweenCurrentDateAndReservationDate()).willReturn(DIFFERENCEOFDATE);
-		//reservation.differenceBetweenCurrentDateAndReservationDate(currentDate, reservationDate)
 		float newPrice = 0;
-		
-		//act
+
+		// act
 		float priceNOT = bill.restriccionForFridayAndSaturday();
-		
-		//assert
-		assertEquals(newPrice, priceNOT,0);
+
+		// assert
+		assertEquals(newPrice, priceNOT, 0);
 	}
 
 	@Test
