@@ -1,7 +1,6 @@
 package co.com.ceiba.Reservas.dominio.service;
 
 import java.util.List;
-
 import co.com.ceiba.Reservas.dominio.entity.ReservationEntity;
 
 public interface ReservationEntityService {

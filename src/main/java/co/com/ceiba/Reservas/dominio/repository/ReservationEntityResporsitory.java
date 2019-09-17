@@ -2,11 +2,10 @@ package co.com.ceiba.Reservas.dominio.repository;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.repository.Repository;
 import co.com.ceiba.Reservas.dominio.entity.ReservationEntity;
 
-public interface ReservationEntityResporsitory extends JpaRepository<ReservationEntity, Integer> {
+public interface ReservationEntityResporsitory extends Repository<ReservationEntity, Integer> {
 
 	List<ReservationEntity> findAll();
 	

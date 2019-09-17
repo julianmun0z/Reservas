@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import co.com.ceiba.Reservas.dominio.entity.BillEntity;
 import co.com.ceiba.Reservas.dominio.service.BillEntityService;
 

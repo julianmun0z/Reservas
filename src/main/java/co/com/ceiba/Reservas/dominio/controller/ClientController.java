@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import co.com.ceiba.Reservas.dominio.entity.BillEntity;
 import co.com.ceiba.Reservas.dominio.entity.ClientEntity;
 import co.com.ceiba.Reservas.dominio.service.ClientEntityService;
 
@@ -21,33 +19,34 @@ import co.com.ceiba.Reservas.dominio.service.ClientEntityService;
 @RestController
 @RequestMapping(value = "/client")
 public class ClientController {
-	
+
 	@Autowired
 	ClientEntityService service;
-	
+
 	@GetMapping
-	public List<ClientEntity>listar(){
+	public List<ClientEntity> listar() {
 		return service.listar();
 	}
-	
+
 	@PostMapping
-	public ClientEntity agregar(@RequestBody ClientEntity client){
-        return service.add(client);
-    }
-	
-	@GetMapping(path = {"/{id}"})
-    public ClientEntity listarId(@PathVariable("id")int id){
-        return service.listarId(id);
-    }
-	
-	@PutMapping(path = {"/{id}"})
-    public ClientEntity editar(@RequestBody ClientEntity client,@PathVariable("id") int id){
+	public ClientEntity agregar(@RequestBody ClientEntity client) {
+		return service.add(client);
+	}
+
+	@GetMapping(path = { "/{id}" })
+	public ClientEntity listarId(@PathVariable("id") int id) {
+		return service.listarId(id);
+	}
+
+	@PutMapping(path = { "/{id}" })
+	public ClientEntity editar(@RequestBody ClientEntity client, @PathVariable("id") int id) {
 		client.setId(id);
-        return service.edit(client);
-    }
-	@DeleteMapping(path = {"/{id}"})
-    public ClientEntity delete(@PathVariable("id") int  id){
-        return service.delete(id);
-    }
+		return service.edit(client);
+	}
+
+	@DeleteMapping(path = { "/{id}" })
+	public ClientEntity delete(@PathVariable("id") int id) {
+		return service.delete(id);
+	}
 
 }

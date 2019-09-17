@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="bill")
+@Table(name = "bill")
 public class BillEntity {
 
 	@Id
@@ -53,9 +53,5 @@ public class BillEntity {
 	public void setDiscpuntForDays(int discpuntForDays) {
 		this.discpuntForDays = discpuntForDays;
 	}
-
-	
-	
-	
 
 }

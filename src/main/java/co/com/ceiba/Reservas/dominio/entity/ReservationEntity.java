@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -26,8 +25,6 @@ public class ReservationEntity {
 	private int numberPeople;
 	@Column
 	private boolean decor;
-
-	
 
 	public int getId() {
 		return id;

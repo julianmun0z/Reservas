@@ -1,12 +1,9 @@
 package co.com.ceiba.Reservas.dominio.service.implement;
 
 import java.util.List;
-
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import co.com.ceiba.Reservas.dominio.entity.ClientEntity;
 import co.com.ceiba.Reservas.dominio.repository.ClientEntityRepository;
 import co.com.ceiba.Reservas.dominio.service.ClientEntityService;

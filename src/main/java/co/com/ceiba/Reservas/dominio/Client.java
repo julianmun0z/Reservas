@@ -7,10 +7,6 @@ public class Client {
 	private String email;
 	private String phoneNumber;
 
-	
-
-
-
 	public Client(String firstName, String lastName, String email, String phoneNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;

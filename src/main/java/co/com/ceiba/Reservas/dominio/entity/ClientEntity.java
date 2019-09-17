@@ -23,8 +23,6 @@ public class ClientEntity {
 	private String email;
 	@Column(name = "phonenumber")
 	private String phoneNumber;
-	
-	
 
 	public int getId() {
 		return id;
@@ -65,7 +63,5 @@ public class ClientEntity {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
-	
-	
+
 }
