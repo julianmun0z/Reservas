@@ -10,7 +10,7 @@ import co.com.ceiba.Reservas.dominio.entity.BillEntity;
 public interface BillEntityService {
 	List<BillEntity>listar(); 
 	BillEntity listarId(int id);
-	BillEntity add(BillEntity b);
-	BillEntity edit(BillEntity b);
+	BillEntity add(BillEntity bill);
+	BillEntity edit(BillEntity bill);
 	BillEntity delete(int id);
 }

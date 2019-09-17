@@ -16,35 +16,35 @@ public class BillEntityServiceImplement implements BillEntityService {
 
 	@Autowired
 	private BillEntityRepository billRepository;
-	
+
 	@Override
 	@Transactional
-	public List<BillEntity>listar() {
+	public List<BillEntity> listar() {
 		return billRepository.findAll();
 	}
 
 	@Override
 	public BillEntity listarId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return billRepository.findAllById(id);
 	}
 
 	@Override
-	public BillEntity add(BillEntity b) {
-		
-		return null;
+	public BillEntity add(BillEntity bill) {
+		return billRepository.save(bill);
 	}
 
 	@Override
-	public BillEntity edit(BillEntity b) {
-		// TODO Auto-generated method stub
-		return null;
+	public BillEntity edit(BillEntity bill) {
+		return billRepository.save(bill);
 	}
 
 	@Override
 	public BillEntity delete(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		BillEntity bill=billRepository.findAllById(id);
+		if(bill!=null) {
+		 billRepository.delete(bill);
+		}
+		return bill;
 	}
 
 }

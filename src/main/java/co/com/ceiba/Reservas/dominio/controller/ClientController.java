@@ -14,41 +14,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.com.ceiba.Reservas.dominio.entity.BillEntity;
-import co.com.ceiba.Reservas.dominio.service.BillEntityService;
+import co.com.ceiba.Reservas.dominio.entity.ClientEntity;
+import co.com.ceiba.Reservas.dominio.service.ClientEntityService;
 
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
-@RequestMapping(value = "/bill")
-public class BillController {
-
+@RequestMapping(value = "/client")
+public class ClientController {
+	
 	@Autowired
-	BillEntityService service;
-
+	ClientEntityService service;
+	
 	@GetMapping
-	public List<BillEntity> listar() {
+	public List<ClientEntity>listar(){
 		return service.listar();
 	}
 	
-	 @PostMapping
-	 public BillEntity agregar(@RequestBody BillEntity bill) {
-		 return service.add(bill);
-	 }
-	 
-	 @GetMapping(path = {"/{id}"})
-	    public BillEntity listarId(@PathVariable("id")int id){
-	        return service.listarId(id);
-	        
-	    }
-	    @PutMapping(path = {"/{id}"})
-	    public BillEntity editar(@RequestBody BillEntity bill,@PathVariable("id") int id){
-	       bill.setId(id);
-	        return service.edit(bill);
-	    }
-	    @DeleteMapping(path = {"/{id}"})
-	    public BillEntity delete(@PathVariable("id") int  id){
-	        return service.delete(id);
-	    }
-	 
+	@PostMapping
+	public ClientEntity agregar(@RequestBody ClientEntity client){
+        return service.add(client);
+    }
 	
-	 
+	@GetMapping(path = {"/{id}"})
+    public ClientEntity listarId(@PathVariable("id")int id){
+        return service.listarId(id);
+    }
+	
+	@PutMapping(path = {"/{id}"})
+    public ClientEntity editar(@RequestBody ClientEntity client,@PathVariable("id") int id){
+		client.setId(id);
+        return service.edit(client);
+    }
+	@DeleteMapping(path = {"/{id}"})
+    public ClientEntity delete(@PathVariable("id") int  id){
+        return service.delete(id);
+    }
+
 }
