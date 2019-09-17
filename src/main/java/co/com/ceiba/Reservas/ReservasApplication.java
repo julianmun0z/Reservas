@@ -9,9 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication
-//@ComponentScan(basePackageClasses = Controlador.class)
-//@EntityScan("com.delivery.domain")
-//@EnableJpaRepositories("com.delivery.repository")
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
