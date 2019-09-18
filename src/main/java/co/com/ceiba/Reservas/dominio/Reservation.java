@@ -50,7 +50,5 @@ public class Reservation {
 		long difference = (reservationDate.getTime() - currentDate.getTime()) / 86400000;
 		return difference;
 	}
-	
-	
 
 }
