@@ -38,7 +38,6 @@ public class ClientEntityServiceImplent implements ClientEntityService{
 
 	@Override
 	public ClientEntity delete(int id) {
-		// TODO Auto-generated method stub
 		ClientEntity client=clientRepository.findAllById(id);
 		if(client!=null) {
 			clientRepository.delete(client);
