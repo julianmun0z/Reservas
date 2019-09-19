@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -33,6 +34,10 @@ public class ReservationEntity {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	
+	
+	
 
 	public Date getReservationDate() {
 		return reservationDate;

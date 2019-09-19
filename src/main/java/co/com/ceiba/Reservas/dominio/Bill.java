@@ -1,6 +1,5 @@
 package co.com.ceiba.Reservas.dominio;
 
-@SuppressWarnings("deprecation")
 public class Bill {
 
 	private float price;
@@ -64,6 +63,7 @@ public class Bill {
 	}
 
 	
+	@SuppressWarnings("deprecation")
 	public float discountForTuesdayAndWednesday() {
 		if (reservation.getReservationDate().getDay() == 2 || reservation.getReservationDate().getDay() == 3) {
 			discpuntForDays *= price / 100;
@@ -74,6 +74,7 @@ public class Bill {
 		return price;
 	}
 
+	@SuppressWarnings("deprecation")
 	public float restriccionForFridayAndSaturday() {
 
 		if (reservation.getReservationDate().getDay() == 5 || reservation.getReservationDate().getDay() == 6
