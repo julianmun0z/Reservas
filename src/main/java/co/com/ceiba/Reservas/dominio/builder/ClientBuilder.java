@@ -1,5 +1,34 @@
 package co.com.ceiba.Reservas.dominio.builder;
 
+import co.com.ceiba.Reservas.dominio.Client;
+import co.com.ceiba.Reservas.dominio.entity.ClientEntity;
+
 public class ClientBuilder {
+	
+	private ClientBuilder() {}
+	
+	public static Client convetDomain(ClientEntity clientEntity) {
+		
+		Client client = null;
+		
+		if(clientEntity != null) {
+			client = new Client(clientEntity.getFirstName(), clientEntity.getLastName(), clientEntity.getEmail(), clientEntity.getPhoneNumber());						
+		}
+		
+		return client;
+	}
+	
+	public static ClientEntity convertEntity(Client client) {
+		
+		ClientEntity clientEntity = new ClientEntity();
+		
+		clientEntity.setFirstName(client.getFirstName());
+		clientEntity.setLastName(client.getLastName());
+		clientEntity.setEmail(client.getEmail());
+		clientEntity.setPhoneNumber(client.getPhoneNumber());
+		
+		return clientEntity;
+		
+	}
 
 }
