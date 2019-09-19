@@ -62,7 +62,7 @@ pipeline {
 	         }
 	         success {
 	             echo 'This will run only if successful'
-	            junit '/test-results'
+	            // junit '/test-results'
 	          }
 	         failure {
 	 		echo 'This will run only if failed' 
