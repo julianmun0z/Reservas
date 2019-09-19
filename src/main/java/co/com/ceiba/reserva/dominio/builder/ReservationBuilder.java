@@ -3,7 +3,7 @@ package co.com.ceiba.reserva.dominio.builder;
 import co.com.ceiba.reserva.dominio.Reservation;
 import co.com.ceiba.reserva.dominio.entity.ReservationEntity;
 
-public class ReservationBuilder {
+public final class ReservationBuilder {
 
 	private ReservationBuilder() {}
 	
