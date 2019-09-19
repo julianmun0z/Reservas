@@ -5,7 +5,7 @@ import co.com.ceiba.Reservas.dominio.entity.ReservationEntity;
 
 public class ReservationBuilder {
 
-	public ReservationBuilder() {}
+	private ReservationBuilder() {}
 	
 	public static Reservation convertDomain(ReservationEntity reservationEntity) {
 		

@@ -5,7 +5,7 @@ import co.com.ceiba.Reservas.dominio.entity.BillEntity;
 
 public class  BillBuilder {
 
-	public BillBuilder() {}
+	private BillBuilder() {}
 
 	public static Bill convertDomain(BillEntity billEntity) {
 		
