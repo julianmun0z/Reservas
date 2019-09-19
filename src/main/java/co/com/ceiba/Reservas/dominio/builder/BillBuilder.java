@@ -3,9 +3,9 @@ package co.com.ceiba.Reservas.dominio.builder;
 import co.com.ceiba.Reservas.dominio.Bill;
 import co.com.ceiba.Reservas.dominio.entity.BillEntity;
 
-public class BillBuilder {
-	
-	private BillBuilder() {}
+public class  BillBuilder {
+
+	public BillBuilder() {}
 
 	public static Bill convertDomain(BillEntity billEntity) {
 		
