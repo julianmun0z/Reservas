@@ -46,9 +46,10 @@ public class Reservation {
 	}
 
 	public long differenceBetweenCurrentDateAndReservationDate(Date currentDate, Date reservationDate) {
-
-		long difference = (reservationDate.getTime() - currentDate.getTime()) / 86400000;
+		long difference;
+		 difference = (reservationDate.getTime() - currentDate.getTime()) / 86400000;
 		return difference;
 	}
+	
 
 }
