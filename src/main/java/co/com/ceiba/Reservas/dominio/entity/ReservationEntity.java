@@ -19,7 +19,7 @@ public class ReservationEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(name = "reservationdate")
-	@DateTimeFormat(pattern = "dd-mm-yyyy")
+	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date reservationDate;
 	@Column(name = "numberpeople")
 	private int numberPeople;
