@@ -9,7 +9,7 @@ public interface ClientEntityService {
 	ClientEntity listarId(int id);
 
 	ClientEntity add(ClientEntity client);
-
+	
 	ClientEntity edit(ClientEntity client);
 
 	ClientEntity delete(int id);

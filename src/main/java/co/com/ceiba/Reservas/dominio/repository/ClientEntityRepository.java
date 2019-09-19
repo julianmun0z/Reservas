@@ -12,6 +12,6 @@ public interface ClientEntityRepository extends Repository<ClientEntity, Integer
 	ClientEntity findAllById(int id);
 
 	ClientEntity save(ClientEntity client);
-
+	
 	void delete(ClientEntity client);
 }
