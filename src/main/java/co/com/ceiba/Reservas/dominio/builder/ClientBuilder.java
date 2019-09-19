@@ -7,7 +7,7 @@ public class ClientBuilder {
 	
 	private ClientBuilder() {}
 	
-	public static Client convetDomain(ClientEntity clientEntity) {
+	public static Client convertDomain(ClientEntity clientEntity) {
 		
 		Client client = null;
 		
