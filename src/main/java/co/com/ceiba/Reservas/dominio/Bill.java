@@ -88,7 +88,7 @@ public class Bill {
 	}
 
 	public float decorForReservation() {
-		if (reservation.isDecor() == true) {
+		if (reservation.isDecor()) {
 
 			price += 30000;
 
