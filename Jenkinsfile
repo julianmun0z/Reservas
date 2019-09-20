@@ -51,7 +51,7 @@ pipeline {
            steps {
                echo "------------>Build<------------"
                sh 'gradle --b build.gradle build -x test'
-              
+               sh 'gradle --b build.gradle build -x test'
            
            } 
        }
@@ -63,7 +63,7 @@ pipeline {
 	         }
 	         success {
 	             echo 'This will run only if successful'
-	           //junit 'Reservas/build/test-results/test/*.xml' 
+	          // junit 'test-results/*.xml'
 	           
 	           
 
