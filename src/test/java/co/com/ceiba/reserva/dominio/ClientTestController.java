@@ -1,9 +1,7 @@
-package co.com.ceiba.reserva.dominio.controller;
+package co.com.ceiba.reserva.dominio;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.util.Date;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,41 +16,43 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import co.com.ceiba.reserva.dominio.Reservation;
-import co.com.ceiba.reserva.dominio.builder.ReservationBuilder;
-import co.com.ceiba.reserva.dominio.entity.ReservationEntity;
-import co.com.ceiba.reserva.testdatabuilder.ReservationTestDataBuilder;
+import co.com.ceiba.reserva.dominio.Client;
+import co.com.ceiba.reserva.dominio.builder.ClientBuilder;
+import co.com.ceiba.reserva.dominio.entity.ClientEntity;
+import co.com.ceiba.reserva.testdatabuilder.ClientTestDataBuilder;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ReservationTestController {
+public class ClientTestController {
 
-	//Date FECHA = new Date(2019-1900,9,4);
 	
 	@Autowired
 	private MockMvc mvc;
 	
-	Reservation reservation = new ReservationTestDataBuilder()
-			//.whitReservation(FECHA)
-			.whitNumberPeople(5)
-			.whiteDecor(false)
-			.buil();
-		
-	ReservationEntity reservationEntity = ReservationBuilder.convertEntity(reservation); 
-
-
+	Client client = new ClientTestDataBuilder()
+			.whitFirstName("Juan")
+			.whitLastName("Gomez")
+			.whiteEmail("juan@g.com")
+			.whitePhoneNumber("316-000-3456").build();
+	
+	ClientEntity clientEntitiy = ClientBuilder.convertEntity(client);
+	
+	
+	
+	
 	@Test
-	public void createReservation() throws Exception
+	public void createClient() throws Exception
 	{
-		mvc.perform( MockMvcRequestBuilders
-			      .post("/reservation")
-			      .content(asJsonString(reservationEntity))
+		mvc.perform(MockMvcRequestBuilders
+				.post("/client")
+				.content(asJsonString(clientEntitiy))
 			      .contentType(MediaType.APPLICATION_JSON)
 			      .accept(MediaType.APPLICATION_JSON))
 			      .andExpect(status().isOk());
 	}
-	
+
+
 	public static String asJsonString(final Object obj) {
 	    try {
 	        return new ObjectMapper().writeValueAsString(obj);
@@ -61,22 +61,21 @@ public class ReservationTestController {
 	    }
 	}
 	
-	
 	@Test
-	public void getReservation() throws Exception
+	public void getClient() throws Exception
 	{
 	  mvc.perform( MockMvcRequestBuilders
-	      .get("/reservation")
+	      .get("/client")
 	      .accept(MediaType.APPLICATION_JSON))
 	      .andDo(print())
 	      .andExpect(status().isOk());  
 	}
 	
 	@Test
-	public void getReservationId() throws Exception
+	public void getClientId() throws Exception
 	{
 	  mvc.perform( MockMvcRequestBuilders
-	      .get("/reservation/{id}", 1)
+	      .get("/client/{id}", 1)
 	      .accept(MediaType.APPLICATION_JSON))
 	      .andDo(print())
 	      .andExpect(status().isOk());
@@ -84,27 +83,25 @@ public class ReservationTestController {
 	
 	
 	@Test
-	public void updateBill() throws Exception
+	public void updateClient() throws Exception
 	{
 	  mvc.perform( MockMvcRequestBuilders
-	      .put("/reservation/{id}", 2)
-	      .content(asJsonString(reservationEntity))
+	      .put("/client/{id}", 2)
+	      .content(asJsonString(client))
 	      .contentType(MediaType.APPLICATION_JSON)
 	      .accept(MediaType.APPLICATION_JSON))
 	      .andExpect(status().isOk())
-	      //.andExpect(MockMvcResultMatchers.jsonPath("$.reservationDate").value(FECHA))
-	      .andExpect(MockMvcResultMatchers.jsonPath("$.numberPeople").value(5))
-	      .andExpect(MockMvcResultMatchers.jsonPath("$.decor").value(false));
+	      .andExpect(MockMvcResultMatchers.jsonPath("$.firstName").value("Juan"))
+	      .andExpect(MockMvcResultMatchers.jsonPath("$.lastName").value("Gomez"))
+	      .andExpect(MockMvcResultMatchers.jsonPath("$.email").value("juan@g.com"))
+	      .andExpect(MockMvcResultMatchers.jsonPath("$.phoneNumber").value("316-000-3456"));
 	}
-	
+
 	@Test
-	public void deleteReservation() throws Exception
+	public void deleteClient() throws Exception
 	{
-	  mvc.perform( MockMvcRequestBuilders.delete("/reservation/{id}", 1) )
+	  mvc.perform( MockMvcRequestBuilders.delete("/client/{id}", 1) )
 	        .andExpect(status().isOk());
 	}
+	
 }
-
-
-
-

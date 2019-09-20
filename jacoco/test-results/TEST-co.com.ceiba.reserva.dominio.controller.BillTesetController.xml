@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.ceiba.reserva.dominio.controller.BillTesetController" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-20T20:32:07" hostname="JULIAN-MUNOZ" time="0.991">
+  <properties/>
+  <testcase name="updateBill" classname="co.com.ceiba.reserva.dominio.controller.BillTesetController" time="0.538"/>
+  <testcase name="getBill" classname="co.com.ceiba.reserva.dominio.controller.BillTesetController" time="0.337"/>
+  <testcase name="getBillId" classname="co.com.ceiba.reserva.dominio.controller.BillTesetController" time="0.053"/>
+  <testcase name="createBill" classname="co.com.ceiba.reserva.dominio.controller.BillTesetController" time="0.046"/>
+  <testcase name="deletebill" classname="co.com.ceiba.reserva.dominio.controller.BillTesetController" time="0.011"/>
+  <system-out><![CDATA[15:31:56.387 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:56.405 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:31:56.430 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:31:56.502 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:31:56.550 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController], using SpringBootContextLoader
+15:31:56.558 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]: class path resource [co/com/ceiba/reserva/dominio/controller/BillTesetController-context.xml] does not exist
+15:31:56.559 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]: class path resource [co/com/ceiba/reserva/dominio/controller/BillTesetControllerContext.groovy] does not exist
+15:31:56.559 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:31:56.561 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]: BillTesetController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:31:56.690 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:56.911 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\julian.munoz\Documents\Reservas\build\classes\java\main\co\com\ceiba\reserva\ReservasApplication.class]
+15:31:56.913 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration co.com.ceiba.reserva.ReservasApplication for test class co.com.ceiba.reserva.dominio.controller.BillTesetController
+15:31:57.179 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [co.com.ceiba.reserva.dominio.controller.BillTesetController]: using defaults.
+15:31:57.180 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:31:57.225 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d9e71a8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@59045293, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@72ece432, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@21580e9d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1f75282f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@641e7198, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7146d45d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@108b100e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@26096660, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@318c4188, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@762f9fd8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3eecfa73]
+15:31:57.231 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:57.232 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:57.232 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:57.233 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:57.241 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3845cf0d testClass = BillTesetController, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2bf58fb9 testClass = BillTesetController, locations = '{}', classes = '{class co.com.ceiba.reserva.ReservasApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e7e8512, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3856ddc7, [ImportsContextCustomizer@4f03259f key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2423a1ea, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3b167b2b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3376de0a], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:31:57.242 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:57.243 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [co.com.ceiba.reserva.dominio.controller.BillTesetController]
+15:31:57.305 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.8.RELEASE)
+
+2019-09-20 15:31:58.089  INFO 12508 --- [    Test worker] c.c.c.r.d.c.BillTesetController          : Starting BillTesetController on JULIAN-MUNOZ with PID 12508 (started by julian.munoz in C:\Users\julian.munoz\Documents\Reservas)
+2019-09-20 15:31:58.092  INFO 12508 --- [    Test worker] c.c.c.r.d.c.BillTesetController          : No active profile set, falling back to default profiles: default
+2019-09-20 15:31:59.586  INFO 12508 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-09-20 15:31:59.816  INFO 12508 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 184ms. Found 3 repository interfaces.
+2019-09-20 15:32:00.997  INFO 12508 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf3e9217] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-09-20 15:32:01.468  INFO 12508 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-09-20 15:32:02.708  INFO 12508 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-09-20 15:32:02.959  INFO 12508 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-09-20 15:32:03.173  INFO 12508 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-09-20 15:32:03.178  INFO 12508 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-09-20 15:32:03.307  INFO 12508 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-09-20 15:32:03.698  INFO 12508 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-09-20 15:32:05.012  INFO 12508 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-09-20 15:32:06.961  INFO 12508 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-20 15:32:07.094  WARN 12508 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-20 15:32:07.747  INFO 12508 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2019-09-20 15:32:07.748  INFO 12508 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2019-09-20 15:32:07.775  INFO 12508 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 27 ms
+2019-09-20 15:32:07.818  INFO 12508 --- [    Test worker] c.c.c.r.d.c.BillTesetController          : Started BillTesetController in 10.48 seconds (JVM running for 14.481)
+2019-09-20 15:32:08.439  INFO 12508 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /bill
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = co.com.ceiba.reserva.dominio.controller.BillController
+           Method = public java.util.List<co.com.ceiba.reserva.dominio.entity.BillEntity> co.com.ceiba.reserva.dominio.controller.BillController.listar()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":2,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":15,"price":50000.0,"discountForPeople":14,"discpuntForDays":34},{"id":16,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":17,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":18,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":19,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":20,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":21,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":22,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":23,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":24,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":25,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":26,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":27,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":28,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":29,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":33,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":34,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":35,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":36,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":37,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":38,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":39,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":40,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":41,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":42,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":43,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":44,"price":5000.0,"discountForPeople":5,"discpuntForDays":10},{"id":45,"price":5000.0,"discountForPeople":5,"discpuntForDays":10}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /bill/1
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = co.com.ceiba.reserva.dominio.controller.BillController
+           Method = public co.com.ceiba.reserva.dominio.entity.BillEntity co.com.ceiba.reserva.dominio.controller.BillController.listarId(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

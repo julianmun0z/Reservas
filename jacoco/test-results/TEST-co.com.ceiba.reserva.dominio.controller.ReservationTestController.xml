@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.ceiba.reserva.dominio.controller.ReservationTestController" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-20T20:32:09" hostname="JULIAN-MUNOZ" time="0.134">
+  <properties/>
+  <testcase name="deleteReservation" classname="co.com.ceiba.reserva.dominio.controller.ReservationTestController" time="0.016"/>
+  <testcase name="createReservation" classname="co.com.ceiba.reserva.dominio.controller.ReservationTestController" time="0.037"/>
+  <testcase name="updateBill" classname="co.com.ceiba.reserva.dominio.controller.ReservationTestController" time="0.02"/>
+  <testcase name="getReservationId" classname="co.com.ceiba.reserva.dominio.controller.ReservationTestController" time="0.012"/>
+  <testcase name="getReservation" classname="co.com.ceiba.reserva.dominio.controller.ReservationTestController" time="0.044"/>
+  <system-out><![CDATA[2019-09-20 15:32:08.994  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [co.com.ceiba.reserva.dominio.controller.ReservationTestController], using SpringBootContextLoader
+2019-09-20 15:32:08.996  INFO 12508 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [co.com.ceiba.reserva.dominio.controller.ReservationTestController]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-09-20 15:32:08.996  INFO 12508 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [co.com.ceiba.reserva.dominio.controller.ReservationTestController]: ReservationTestController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-09-20 15:32:08.999  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration co.com.ceiba.reserva.ReservasApplication for test class co.com.ceiba.reserva.dominio.controller.ReservationTestController
+2019-09-20 15:32:09.001  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-09-20 15:32:09.001  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@9344f79, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@53bdecc6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49757f0c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31c7e54b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1a232b8d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26c43fd3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@442bb918, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4ac8f16b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4934d4fc, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4e8940ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@57f3c31e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5a3d2322]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /reservation/1
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = co.com.ceiba.reserva.dominio.controller.ReservationController
+           Method = public co.com.ceiba.reserva.dominio.entity.ReservationEntity co.com.ceiba.reserva.dominio.controller.ReservationController.listarId(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /reservation
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = co.com.ceiba.reserva.dominio.controller.ReservationController
+           Method = public java.util.List<co.com.ceiba.reserva.dominio.entity.ReservationEntity> co.com.ceiba.reserva.dominio.controller.ReservationController.listar()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":2,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":3,"reservationDate":"2019-09-14T00:00:00.000+0000","numberPeople":2,"decor":false},{"id":5,"reservationDate":"2019-09-28T00:00:00.000+0000","numberPeople":2,"decor":true},{"id":6,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":7,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":8,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":9,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":10,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":11,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":12,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":13,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":14,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":15,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":16,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":17,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":18,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":19,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":20,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":21,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":22,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":23,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":24,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":25,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":26,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":27,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":28,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":29,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":30,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":31,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":32,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":33,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":34,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":35,"reservationDate":"2019-10-04T05:00:00.000+0000","numberPeople":5,"decor":false},{"id":36,"reservationDate":"2019-10-04T05:00:00.000+0000","numberPeople":5,"decor":false},{"id":37,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":38,"reservationDate":"1970-01-01T00:00:02.014+0000","numberPeople":5,"decor":false},{"id":39,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":40,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":41,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":42,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":43,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":44,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":45,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false},{"id":46,"reservationDate":"1969-12-31T23:59:57.981+0000","numberPeople":5,"decor":false}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

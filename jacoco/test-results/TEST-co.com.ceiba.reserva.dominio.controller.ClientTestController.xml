@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.ceiba.reserva.dominio.controller.ClientTestController" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-09-20T20:32:08" hostname="JULIAN-MUNOZ" time="0.125">
+  <properties/>
+  <testcase name="updateClient" classname="co.com.ceiba.reserva.dominio.controller.ClientTestController" time="0.033"/>
+  <testcase name="getClientId" classname="co.com.ceiba.reserva.dominio.controller.ClientTestController" time="0.018"/>
+  <testcase name="deleteClient" classname="co.com.ceiba.reserva.dominio.controller.ClientTestController" time="0.012"/>
+  <testcase name="getClient" classname="co.com.ceiba.reserva.dominio.controller.ClientTestController" time="0.036"/>
+  <testcase name="createClient" classname="co.com.ceiba.reserva.dominio.controller.ClientTestController" time="0.022"/>
+  <system-out><![CDATA[2019-09-20 15:32:08.850  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [co.com.ceiba.reserva.dominio.controller.ClientTestController], using SpringBootContextLoader
+2019-09-20 15:32:08.852  INFO 12508 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [co.com.ceiba.reserva.dominio.controller.ClientTestController]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-09-20 15:32:08.852  INFO 12508 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [co.com.ceiba.reserva.dominio.controller.ClientTestController]: ClientTestController does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-09-20 15:32:08.858  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration co.com.ceiba.reserva.ReservasApplication for test class co.com.ceiba.reserva.dominio.controller.ClientTestController
+2019-09-20 15:32:08.861  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-09-20 15:32:08.861  INFO 12508 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7b9be185, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1402924e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2dc582bc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@38647c30, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c573570, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1cc74456, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1d16f510, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6088f7e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2351d67a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@592c3b2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f860865, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6d371194]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /client/1
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = co.com.ceiba.reserva.dominio.controller.ClientController
+           Method = public co.com.ceiba.reserva.dominio.entity.ClientEntity co.com.ceiba.reserva.dominio.controller.ClientController.listarId(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /client
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = co.com.ceiba.reserva.dominio.controller.ClientController
+           Method = public java.util.List<co.com.ceiba.reserva.dominio.entity.ClientEntity> co.com.ceiba.reserva.dominio.controller.ClientController.listar()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":2,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":3,"firstName":"luis","lastName":"Torrez","email":"t@torres","phoneNumber":"3256"},{"id":4,"firstName":"Barry ","lastName":"Allen","email":"barry@allen.com","phoneNumber":"3001112222"},{"id":5,"firstName":"pedro","lastName":"gomez","email":"p@g.com","phoneNumber":"235236"},{"id":7,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":8,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":9,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":10,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":11,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":12,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":13,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":14,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":15,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":16,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":17,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":18,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":19,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":20,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":21,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":22,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":23,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":24,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":25,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":26,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":27,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":28,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":29,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":30,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":31,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":32,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":33,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":34,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"},{"id":35,"firstName":"Juan","lastName":"Gomez","email":"juan@g.com","phoneNumber":"316-000-3456"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
