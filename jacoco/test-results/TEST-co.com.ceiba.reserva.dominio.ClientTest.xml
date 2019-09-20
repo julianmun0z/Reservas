@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.ceiba.reserva.dominio.ClientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-19T21:27:56" hostname="JULIAN-MUNOZ" time="0.003">
+  <properties/>
+  <testcase name="createClientTest" classname="co.com.ceiba.reserva.dominio.ClientTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

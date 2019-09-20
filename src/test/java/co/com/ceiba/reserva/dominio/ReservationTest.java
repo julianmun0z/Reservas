@@ -16,6 +16,7 @@ public class ReservationTest {
 	private static final Date CURRENTDATE = new Date(2019-1900,8,9);
 	private static final Date RESERVATIONDATE = new Date(2019-1900,8,24);
 	private static final int NUMBERPEOPLE = 5;
+	private static final boolean DECOR = false;
 	
 	@InjectMocks
 	private Reservation reservation = new Reservation();
@@ -30,6 +31,7 @@ public class ReservationTest {
 		//arrange
 		ReservationTestDataBuilder reservationTestDataBuilder = new ReservationTestDataBuilder()
 				.whitReservation(RESERVATIONDATE)
+				.whiteDecor(DECOR)
 				.whitNumberPeople(NUMBERPEOPLE);
 		
 		//act
@@ -37,7 +39,9 @@ public class ReservationTest {
 		
 		//assert
 		assertEquals(RESERVATIONDATE, reservation.getReservationDate());
+		assertEquals(DECOR, reservation.isDecor());
 		assertEquals(NUMBERPEOPLE, reservation.getNumberPeople());
+		
 	}
 	
 	@Test
