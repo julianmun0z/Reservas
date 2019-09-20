@@ -20,7 +20,7 @@ import co.com.ceiba.reserva.testdatabuilder.BillTestDataBuilder;
 @SpringBootTest
 @AutoConfigureMockMvc
 
-public class BillTesetController {
+public class BillControllerTest {
 
 	
 	
