@@ -51,6 +51,7 @@ pipeline {
            steps {
                echo "------------>Build<------------"
                sh 'gradle --b build.gradle build -x test'
+               sh 'gradle --b build.gradle build -x test'
            
            } 
        }
