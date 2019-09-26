@@ -23,8 +23,10 @@ public class ClientTest {
 				.whitLastName(LASTNAME)
 				.whiteEmail(EMAIL)
 				.whitePhoneNumber(PHONENUMBER);
+		
 		//act
 		Client client = clientTestDataBuilder.build();
+		
 		
 		//assert
 		assertEquals(FIRSTNAME, client.getFirstName());

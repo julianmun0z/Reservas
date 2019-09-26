@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,7 +23,10 @@ public class BillEntity {
 	private int discountForPeople;
 	@Column(name = "discpuntfordays")
 	private int discpuntForDays;
-
+	
+	@OneToOne
+    @JoinColumn(name = "fk_reservation")
+	private ReservationEntity reservationEntity;
 
 	public int getId() {
 		return id;

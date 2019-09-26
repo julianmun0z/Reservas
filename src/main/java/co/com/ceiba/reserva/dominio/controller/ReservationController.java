@@ -20,35 +20,35 @@ import co.com.ceiba.reserva.dominio.service.ReservationEntityService;
 @RestController
 @RequestMapping(value = "/reservation")
 public class ReservationController {
-	
+
 	@Autowired
 	ReservationEntityService service;
-	
+
 	@GetMapping
-	public List<ReservationEntity>listar(){
-	return service.listar();
+	public List<ReservationEntity> listar() {
+		return service.listar();
 	}
-	
+
 	@PostMapping
-	 public ReservationEntity agregar(@RequestBody ReservationEntity reservation) {
-		 return service.add(reservation);
-	 }
-	 
-	 @GetMapping(path = {"/{id}"})
-	    public ReservationEntity listarId(@PathVariable("id")int id){
-	        return service.listarId(id);
-	        
-	    }
-	    @PutMapping(path = {"/{id}"})
-	    public ReservationEntity editar(@RequestBody ReservationEntity bill,@PathVariable("id") int id){
-	       bill.setId(id);
-	        return service.edit(bill);
-	    }
-	    @DeleteMapping(path = {"/{id}"})
-	    public ReservationEntity delete(@PathVariable("id") int  id){
-	        return service.delete(id);
-	    }
-	
-	
+	public ReservationEntity crearReserva(@RequestBody ReservationEntity reservation) {
+		return service.add(reservation);
+	}
+
+	@GetMapping(path = { "/{id}" })
+	public ReservationEntity listarId(@PathVariable("id") int id) {
+		return service.listarId(id);
+
+	}
+
+	@PutMapping(path = { "/{id}" })
+	public ReservationEntity editar(@RequestBody ReservationEntity bill, @PathVariable("id") int id) {
+		bill.setId(id);
+		return service.edit(bill);
+	}
+
+	@DeleteMapping(path = { "/{id}" })
+	public ReservationEntity delete(@PathVariable("id") int id) {
+		return service.delete(id);
+	}
 
 }

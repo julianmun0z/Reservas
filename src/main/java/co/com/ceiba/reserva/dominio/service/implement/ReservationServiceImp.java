@@ -9,7 +9,7 @@ import co.com.ceiba.reserva.dominio.repository.ReservationEntityResporsitory;
 import co.com.ceiba.reserva.dominio.service.ReservationEntityService;
 
 @Service
-public class ReservationEntityServiceImplement implements ReservationEntityService {
+public class ReservationServiceImp implements ReservationEntityService {
 
 	@Autowired
 	private ReservationEntityResporsitory reservationRepository;

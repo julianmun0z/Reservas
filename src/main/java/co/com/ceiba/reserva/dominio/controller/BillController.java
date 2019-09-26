@@ -47,8 +47,6 @@ public class BillController {
 	    @DeleteMapping(path = {"/{id}"})
 	    public BillEntity delete(@PathVariable("id") int  id){
 	        return service.delete(id);
-	    }
-	 
-	
-	 
+	}
+
 }

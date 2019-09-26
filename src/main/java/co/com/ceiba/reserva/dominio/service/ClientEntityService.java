@@ -5,6 +5,7 @@ import java.util.List;
 import co.com.ceiba.reserva.dominio.entity.ClientEntity;
 
 public interface ClientEntityService {
+	
 	List<ClientEntity> listar();
 
 	ClientEntity listarId(int id);
