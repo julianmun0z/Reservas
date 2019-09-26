@@ -2,6 +2,9 @@ package co.com.ceiba.reserva.dominio.controller;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.Date;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +26,13 @@ import co.com.ceiba.reserva.testdatabuilder.ReservationTestDataBuilder;
 @AutoConfigureMockMvc
 public class ReservationTestController {
 
-	//Date FECHA = new Date(2019-1900,9,4);
+	Date d = new Date(); 
 	
 	@Autowired
 	private MockMvc mvc;
 	
 	Reservation reservation = new ReservationTestDataBuilder()
-			//.whitReservation(FECHA)
+			//.whitReservation(2,2,2019 00,00,00)
 			.whitNumberPeople(5)
 			.whiteDecor(false)
 			.buil();
@@ -87,7 +90,7 @@ public class ReservationTestController {
 	      .contentType(MediaType.APPLICATION_JSON)
 	      .accept(MediaType.APPLICATION_JSON))
 	      .andExpect(status().isOk())
-	      //.andExpect(MockMvcResultMatchers.jsonPath("$.reservationDate").value(FECHA))
+	     // .andExpect(MockMvcResultMatchers.jsonPath("$.reservationDate").value()))
 	      .andExpect(MockMvcResultMatchers.jsonPath("$.numberPeople").value(5))
 	      .andExpect(MockMvcResultMatchers.jsonPath("$.decor").value(false));
 	}

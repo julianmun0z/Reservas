@@ -40,7 +40,7 @@ public class ReservationTestDataBuilder {
 
 	
 	public Reservation buil() {
-		return new Reservation(this.reservationDate, this.numberPeople, false);
+		return new Reservation(this.reservationDate, this.numberPeople, this.decor);
 	}
 
 
