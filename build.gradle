@@ -36,6 +36,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation'javax.xml.bind:jaxb-api:2.3.0'
 	runtimeOnly 'mysql:mysql-connector-java'
+	implementation('com.h2database:h2')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testCompile group: 'org.mockito', name: 'mockito-core', version: '3.0.0'
 compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
@@ -44,7 +45,11 @@ compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: 
 	
 }
 
-
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
 
 
 
