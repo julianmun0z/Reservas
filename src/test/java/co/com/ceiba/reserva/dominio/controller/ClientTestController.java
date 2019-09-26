@@ -30,7 +30,13 @@ public class ClientTestController {
 	@Autowired
 	private MockMvc mvc;
 	
-
+	Client client = new ClientTestDataBuilder()
+			.whitFirstName("Juan")
+			.whitLastName("Gomez")
+			.whiteEmail("juan@g.com")
+			.whitePhoneNumber("316-000-3456").build();
+	
+	ClientEntity clientEntitiy = ClientBuilder.convertEntity(client);
 	
 	
 	
@@ -38,14 +44,6 @@ public class ClientTestController {
 	@Test
 	public void createClient() throws Exception
 	{
-		Client client = new ClientTestDataBuilder()
-				.whitFirstName("Juan")
-				.whitLastName("Gomez")
-				.whiteEmail("juan@g.com")
-				.whitePhoneNumber("316-000-3456").build();
-		
-		ClientEntity clientEntitiy = ClientBuilder.convertEntity(client);
-		
 		mvc.perform(MockMvcRequestBuilders
 				.post("/client")
 				.content(asJsonString(clientEntitiy))
@@ -87,14 +85,6 @@ public class ClientTestController {
 	@Test
 	public void updateClient() throws Exception
 	{
-		Client client = new ClientTestDataBuilder()
-				.whitFirstName("Juan")
-				.whitLastName("Gomez")
-				.whiteEmail("juan@g.com")
-				.whitePhoneNumber("316-000-3456").build();
-		
-		ClientEntity clientEntitiy = ClientBuilder.convertEntity(client);
-
 	  mvc.perform( MockMvcRequestBuilders
 	      .put("/client/{id}", 2)
 	      .content(asJsonString(client))
