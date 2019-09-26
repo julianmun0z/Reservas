@@ -19,7 +19,6 @@ import co.com.ceiba.reserva.testdatabuilder.BillTestDataBuilder;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-
 public class BillControllerTest {
 
 	
@@ -28,10 +27,15 @@ public class BillControllerTest {
 	private MockMvc mvc;
 
 	Bill bill = new BillTestDataBuilder().
-	whitePrice(5000).whiteDiscountForPeople(5).whiteDiscountForDays(10).build();
+	whitePrice(5000)
+	.whiteDiscountForPeople(5)
+	.whiteDiscountForDays(10)
+	.build();
 
 BillEntity bills = BillBuilder.convertEntity(bill);
 	
+	
+
 	@Test
 	public void createBill() throws Exception
 	{

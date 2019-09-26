@@ -38,6 +38,6 @@ public class BillTestDataBuilder {
 	}
 
 	public Bill build() {
-		return new Bill(price, discountForPeople, discpuntForDays, null);
+		return new Bill(price, discountForPeople, discpuntForDays);
 	}
 }

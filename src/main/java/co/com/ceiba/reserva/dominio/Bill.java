@@ -7,16 +7,14 @@ public class Bill {
 	private int discpuntForDays;
 	private Reservation reservation;
 
-	public Bill() {
 
-	}
 
-	public Bill(float price, int discountForPeople, int discpuntForDays, Reservation reservation) {
+	public Bill(float price, int discountForPeople, int discpuntForDays) {
 
 		this.price = price;
 		this.discountForPeople = discountForPeople;
 		this.discpuntForDays = discpuntForDays;
-		this.reservation = reservation;
+		//this.reservation = reservation;
 
 	}
 
@@ -44,13 +42,13 @@ public class Bill {
 		this.discpuntForDays = discpuntForDays;
 	}
 
-	public Reservation getReservation() {
-		return reservation;
-	}
-
-	public void setReservation(Reservation reservation) {
-		this.reservation = reservation;
-	}
+//	public Reservation getReservation() {
+//		return reservation;
+//	}
+//
+//	public void setReservation(Reservation reservation) {
+//		this.reservation = reservation;
+//	}
 
 	public float discountForFivePeopleOrMore() {
 		if (reservation.getNumberPeople() >= 5) {
