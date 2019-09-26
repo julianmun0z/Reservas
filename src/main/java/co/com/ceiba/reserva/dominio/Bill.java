@@ -9,7 +9,7 @@ public class Bill {
 
 
 
-	public Bill(float price, int discountForPeople, int discpuntForDays) {
+	public Bill(float price, int discountForPeople, int discpuntForDays, Reservation reservation) {
 
 		this.price = price;
 		this.discountForPeople = discountForPeople;
@@ -17,6 +17,8 @@ public class Bill {
 		//this.reservation = reservation;
 
 	}
+
+
 
 	public float getPrice() {
 		return price;

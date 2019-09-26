@@ -13,7 +13,7 @@ public final class BillBuilder {
 		Bill bill = null;
 		
 		if(billEntity != null) {
-			bill = new Bill(billEntity.getPrice(),billEntity.getDiscountForPeople(),billEntity.getDiscpuntForDays());	
+			bill = new Bill(billEntity.getPrice(),billEntity.getDiscountForPeople(),billEntity.getDiscpuntForDays(), null);	
 		}
 		
 		return bill;

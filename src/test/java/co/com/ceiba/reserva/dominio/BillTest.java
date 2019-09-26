@@ -28,7 +28,7 @@ public class BillTest {
 	private Reservation reservation;
 
 	@InjectMocks
-	private Bill bill = new Bill(0, 0, 0);
+	private Bill bill = new Bill(0, 0, 0, reservation);
 
 	@Before
 	public void setUp() {
